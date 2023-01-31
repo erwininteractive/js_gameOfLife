@@ -18,8 +18,7 @@ var grid = new Array(columns).fill(null).map(() =>
         Math.floor(Math.random() * 2)));
 
 /* Start with initial (or last) grid and evaluate neighbors */
-function createNextGenGrid(prevGrid)
-{
+function createNextGenGrid(prevGrid) {
     let nextGrid = prevGrid.map((newarray) => [...newarray]);
 
     for(let column = 0; column < prevGrid.length; column++) {
@@ -56,8 +55,7 @@ function createNextGenGrid(prevGrid)
     return nextGrid;
 }
 
-function render(grid)
-{
+function render(grid) {
     for(let column = 0; column < grid.length; column++) {
         for(let row = 0; row < grid[column].length; row++) {
             let cell = grid[column][row];
@@ -70,8 +68,7 @@ function render(grid)
     }
 }
 
-function run()
-{
+function run() {
     grid = createNextGenGrid(grid)
 
     gen++;
